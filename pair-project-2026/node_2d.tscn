@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://pj32wm7c0yix"]
+
+[ext_resource type="Texture2D" uid="uid://decpjyrmb71fr" path="res://icon.svg" id="1_wtcfe"]
+
+[node name="Node2D" type="Node2D" unique_id=1571339080]
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=1521471131]
+position = Vector2(599, 319)
+scale = Vector2(6.390625, 0.5625)
+texture = ExtResource("1_wtcfe")
+
+[node name="Label" type="Label" parent="Icon" unique_id=521755508]
+anchors_preset = -1
+anchor_top = -1.5560001
+anchor_right = 0.45800003
+anchor_bottom = -1.167
+offset_left = -61.652813
+offset_top = 430.2791
+offset_right = 0.68162537
+offset_bottom = 570.70935
+text = "hihhhihuihiuhu"

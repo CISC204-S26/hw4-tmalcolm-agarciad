@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://brgruhu1sm0b5"]
+
+[ext_resource type="Texture2D" uid="uid://djervuhpnpml" path="res://icon.svg" id="1_kch5v"]
+
+[node name="this will be ashs scene" type="Node2D" unique_id=1996993879]
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=530434273]
+self_modulate = Color(0.6566828, 0.65668285, 1.92523e-07, 1)
+position = Vector2(567, 268.5)
+scale = Vector2(6.6875, 2.2734375)
+texture = ExtResource("1_kch5v")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="." unique_id=395448827]
+offset_right = 1134.0
+offset_bottom = 622.0
+theme_override_font_sizes/normal_font_size = 51
+text = "it was all yelloowwwww
+"

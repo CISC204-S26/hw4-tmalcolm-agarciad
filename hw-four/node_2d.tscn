@@ -1,10 +1,30 @@
-[gd_scene load_steps=2 format=3 uid="uid://bksc4sipr2h1k"]
+[gd_scene format=3 uid="uid://bksc4sipr2h1k"]
 
-[ext_resource type="Texture2D" uid="uid://djervuhpnpml" path="res://icon.svg" id="1_wtcfe"]
+[ext_resource type="Script" uid="uid://cqbt10ltwoa53" path="res://character_body_2d.gd" id="1_0e48y"]
+[ext_resource type="Texture2D" uid="uid://cw551dhh2f64r" path="res://Clownvyvyvtgft.png" id="2_epypp"]
 
-[node name="Node2D" type="Node2D"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_0hol4"]
+radius = 80.024994
 
-[node name="Icon" type="Sprite2D" parent="."]
-position = Vector2(614, 334)
-scale = Vector2(3.40625, 1.76562)
-texture = ExtResource("1_wtcfe")
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_q6r6c"]
+size = Vector2(121.5, 94.5)
+
+[node name="Node2D" type="Node2D" unique_id=777989029]
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1882224785]
+script = ExtResource("1_0e48y")
+
+[node name="Clownvyvyvtgft" type="Sprite2D" parent="CharacterBody2D" unique_id=291308280]
+position = Vector2(290.25, 387.24997)
+scale = Vector2(0.27124023, 0.2731934)
+texture = ExtResource("2_epypp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1688248489]
+position = Vector2(272, 422)
+shape = SubResource("CircleShape2D_0hol4")
+
+[node name="Interaction_Dectector" type="Area2D" parent="." unique_id=570456553]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Interaction_Dectector" unique_id=2092571555]
+position = Vector2(290, 290)
+shape = SubResource("RectangleShape2D_q6r6c")

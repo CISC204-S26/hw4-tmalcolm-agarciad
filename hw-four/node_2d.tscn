@@ -24,7 +24,13 @@ position = Vector2(272, 422)
 shape = SubResource("CircleShape2D_0hol4")
 
 [node name="Interaction_Dectector" type="Area2D" parent="." unique_id=570456553]
+monitorable = false
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Interaction_Dectector" unique_id=2092571555]
+light_mask = 2
+visibility_layer = 0
 position = Vector2(290, 290)
 shape = SubResource("RectangleShape2D_q6r6c")
+
+[connection signal="area_entered" from="Interaction_Dectector" to="CharacterBody2D" method="_on_interaction_dectector_area_entered"]
+[connection signal="area_exited" from="Interaction_Dectector" to="CharacterBody2D" method="_on_interaction_dectector_area_exited"]

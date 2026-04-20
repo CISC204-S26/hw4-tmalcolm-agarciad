@@ -38,6 +38,11 @@ animations = [{
 "name": &"Walking right",
 "speed": 5.0
 }, {
+"frames": [],
+"loop": true,
+"name": &"walking back",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("6_hqns4")
@@ -69,9 +74,7 @@ shape = SubResource("CircleShape2D_0hol4")
 position = Vector2(150, 510.00003)
 scale = Vector2(0.12573244, 0.1464844)
 sprite_frames = SubResource("SpriteFrames_0e48y")
-animation = &"walking left"
-frame = 1
-frame_progress = 0.30913785
+animation = &"walking back"
 
 [node name="Interaction_Dectector" type="Area2D" parent="." unique_id=570456553]
 monitorable = false

@@ -70,7 +70,8 @@ position = Vector2(150, 510.00003)
 scale = Vector2(0.12573244, 0.1464844)
 sprite_frames = SubResource("SpriteFrames_0e48y")
 animation = &"walking left"
-frame_progress = 0.5366789
+frame = 1
+frame_progress = 0.30913785
 
 [node name="Interaction_Dectector" type="Area2D" parent="." unique_id=570456553]
 monitorable = false

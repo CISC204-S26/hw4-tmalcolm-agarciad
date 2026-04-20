@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://n441eyp377b0"]
+
+[ext_resource type="PackedScene" uid="uid://ds5aqbnbdjw26" path="res://key.tscn" id="1_8uh7m"]
+[ext_resource type="PackedScene" uid="uid://bksc4sipr2h1k" path="res://node_2d.tscn" id="2_6uqi0"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_ppyta"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ykrsh"]
+size = Vector2(1.0020185, 1.0265484)
+
+[node name="test" type="Node2D" unique_id=1732120541]
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=1571308843]
+position = Vector2(579, 507)
+scale = Vector2(1176.625, 56.5)
+mesh = SubResource("BoxMesh_ppyta")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1590621186]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=313746969]
+position = Vector2(578.5001, 507)
+scale = Vector2(1176.625, 56.5)
+shape = SubResource("RectangleShape2D_ykrsh")
+
+[node name="interactablev2" parent="." unique_id=1960603387 instance=ExtResource("1_8uh7m")]
+position = Vector2(-410, 81)
+
+[node name="interactablev3" parent="." unique_id=384446138 instance=ExtResource("1_8uh7m")]
+position = Vector2(524, 89)
+
+[node name="CharacterBody2D" parent="." unique_id=1882224785 instance=ExtResource("2_6uqi0")]
+position = Vector2(299, -92)

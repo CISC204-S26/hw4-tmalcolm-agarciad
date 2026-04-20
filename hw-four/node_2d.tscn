@@ -5,8 +5,10 @@
 [ext_resource type="Texture2D" uid="uid://dctdq7di8rlx8" path="res://Girl 3.png" id="3_rj586"]
 [ext_resource type="Texture2D" uid="uid://bpurnkcrj5oe" path="res://Girl 4.png" id="4_4d7sh"]
 [ext_resource type="Texture2D" uid="uid://mfqwhpkyhcem" path="res://Girl 5.png" id="5_ir8iy"]
+[ext_resource type="Texture2D" uid="uid://ddcxeuuebft8e" path="res://Girl 9.png" id="6_4d7sh"]
 [ext_resource type="Texture2D" uid="uid://bx631q6a8vxjh" path="res://Girl 7.png" id="6_hqns4"]
 [ext_resource type="Texture2D" uid="uid://dyyowicway8vo" path="res://Girl 8.png" id="7_x0ka3"]
+[ext_resource type="Texture2D" uid="uid://cw551dhh2f64r" path="res://Clownvyvyvtgft.png" id="8_rj586"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0hol4"]
 radius = 80.024994
@@ -38,7 +40,10 @@ animations = [{
 "name": &"Walking right",
 "speed": 5.0
 }, {
-"frames": [],
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_4d7sh")
+}],
 "loop": true,
 "name": &"walking back",
 "speed": 5.0
@@ -86,6 +91,11 @@ position = Vector2(290, 290)
 shape = SubResource("RectangleShape2D_q6r6c")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=536723950]
+
+[node name="Clownvyvyvtgft" type="Sprite2D" parent="." unique_id=390716036]
+position = Vector2(298, 441)
+scale = Vector2(0.30224603, 0.30224603)
+texture = ExtResource("8_rj586")
 
 [connection signal="area_entered" from="Interaction_Dectector" to="CharacterBody2D" method="_on_interaction_dectector_area_entered"]
 [connection signal="area_exited" from="Interaction_Dectector" to="CharacterBody2D" method="_on_interaction_dectector_area_exited"]

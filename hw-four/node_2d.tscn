@@ -1,10 +1,57 @@
 [gd_scene format=3 uid="uid://bksc4sipr2h1k"]
 
 [ext_resource type="Script" uid="uid://cqbt10ltwoa53" path="res://character_body_2d.gd" id="1_0e48y"]
-[ext_resource type="Texture2D" uid="uid://cw551dhh2f64r" path="res://Clownvyvyvtgft.png" id="2_epypp"]
+[ext_resource type="Texture2D" uid="uid://ca18qkjpbq7c2" path="res://Girl 1.png" id="2_d21ai"]
+[ext_resource type="Texture2D" uid="uid://dctdq7di8rlx8" path="res://Girl 3.png" id="3_rj586"]
+[ext_resource type="Texture2D" uid="uid://bpurnkcrj5oe" path="res://Girl 4.png" id="4_4d7sh"]
+[ext_resource type="Texture2D" uid="uid://mfqwhpkyhcem" path="res://Girl 5.png" id="5_ir8iy"]
+[ext_resource type="Texture2D" uid="uid://bx631q6a8vxjh" path="res://Girl 7.png" id="6_hqns4"]
+[ext_resource type="Texture2D" uid="uid://dyyowicway8vo" path="res://Girl 8.png" id="7_x0ka3"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_0hol4"]
 radius = 80.024994
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0e48y"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_d21ai")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_rj586")
+}],
+"loop": true,
+"name": &"Walking front",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_4d7sh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_ir8iy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_4d7sh")
+}],
+"loop": true,
+"name": &"Walking right",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_hqns4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_x0ka3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_hqns4")
+}],
+"loop": true,
+"name": &"walking left",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q6r6c"]
 size = Vector2(121.5, 94.5)
@@ -14,14 +61,16 @@ size = Vector2(121.5, 94.5)
 [node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=1882224785]
 script = ExtResource("1_0e48y")
 
-[node name="Clownvyvyvtgft" type="Sprite2D" parent="CharacterBody2D" unique_id=291308280]
-position = Vector2(290.25, 387.24997)
-scale = Vector2(0.27124023, 0.2731934)
-texture = ExtResource("2_epypp")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1688248489]
 position = Vector2(272, 422)
 shape = SubResource("CircleShape2D_0hol4")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=366439171]
+position = Vector2(150, 510.00003)
+scale = Vector2(0.12573244, 0.1464844)
+sprite_frames = SubResource("SpriteFrames_0e48y")
+animation = &"walking left"
+frame_progress = 0.5366789
 
 [node name="Interaction_Dectector" type="Area2D" parent="." unique_id=570456553]
 monitorable = false
@@ -31,6 +80,8 @@ light_mask = 2
 visibility_layer = 0
 position = Vector2(290, 290)
 shape = SubResource("RectangleShape2D_q6r6c")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=536723950]
 
 [connection signal="area_entered" from="Interaction_Dectector" to="CharacterBody2D" method="_on_interaction_dectector_area_entered"]
 [connection signal="area_exited" from="Interaction_Dectector" to="CharacterBody2D" method="_on_interaction_dectector_area_exited"]

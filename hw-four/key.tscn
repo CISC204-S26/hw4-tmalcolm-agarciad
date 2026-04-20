@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://ds5aqbnbdjw26"]
+
+[ext_resource type="Script" uid="uid://b34hlsy07b658" path="res://key.gd" id="1_up4cr"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_krfvd"]
+radius = 86.0
+height = 638.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_d8y70"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_k4l57"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p0yg6"]
+radius = 73.0
+height = 196.0
+
+[node name="interactablev2" type="Area2D" unique_id=1960603387]
+collision_layer = 2
+collision_mask = 0
+monitoring = false
+script = ExtResource("1_up4cr")
+metadata/_custom_type_script = "uid://bogmwdj2dxgud"
+
+[node name="area for interact" type="CollisionShape2D" parent="." unique_id=1711445543]
+position = Vector2(526, 301)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_krfvd")
+
+[node name="theactual key" type="Area2D" parent="." unique_id=577197133]
+
+[node name="placeholder" type="MeshInstance2D" parent="theactual key" unique_id=1594467271]
+position = Vector2(482.99997, 301)
+scale = Vector2(57.564636, 56.50001)
+mesh = SubResource("SphereMesh_d8y70")
+
+[node name="placeholderr" type="MeshInstance2D" parent="theactual key" unique_id=2100797787]
+position = Vector2(539, 295)
+scale = Vector2(74.24997, 24.75002)
+mesh = SubResource("BoxMesh_k4l57")
+
+[node name="placeholderr2" type="MeshInstance2D" parent="theactual key" unique_id=1309275288]
+position = Vector2(564.5625, 303.3125)
+scale = Vector2(23.124977, 41.37502)
+mesh = SubResource("BoxMesh_k4l57")
+
+[node name="area for key" type="CollisionShape2D" parent="theactual key" unique_id=658036866]
+position = Vector2(522, 301)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_p0yg6")

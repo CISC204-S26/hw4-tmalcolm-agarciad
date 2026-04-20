@@ -1,5 +1,5 @@
 extends CharacterBody2D
-var nearby_interactables
+@export var nearby_interactables = []
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
@@ -24,16 +24,18 @@ func _physics_process(delta: float) -> void:
 
 	move_and_slide()
 
-
+	if Input.is_action_just_pressed("interact"):
+		if nearby_interactables:
+			nearby_interactables.back().interact()
 func _on_interaction_dectector_area_entered(area: Area2D) -> void:
 	print("interactable detected")
-	area.set_active(true)
-	nearby_interactables. append(area)
+	#area.set_active(true)
+	nearby_interactables.append(area)
 	pass # Replace with function body.
 
 
 func _on_interaction_dectector_area_exited(area: Area2D) -> void:
 	print("interactable removed")
-	area.set_active(false)
+	#area.set_active(false)
 	nearby_interactables.erase(area)
 	pass # Replace with function body.

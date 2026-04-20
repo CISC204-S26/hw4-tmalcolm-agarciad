@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://mfqwhpkyhcem" path="res://Girl 5.png" id="5_ir8iy"]
 [ext_resource type="Texture2D" uid="uid://ddcxeuuebft8e" path="res://Girl 9.png" id="6_4d7sh"]
 [ext_resource type="Texture2D" uid="uid://bx631q6a8vxjh" path="res://Girl 7.png" id="6_hqns4"]
+[ext_resource type="Texture2D" uid="uid://dkf5frkw6fs2e" path="res://Girl 11.png" id="7_ir8iy"]
 [ext_resource type="Texture2D" uid="uid://dyyowicway8vo" path="res://Girl 8.png" id="7_x0ka3"]
 [ext_resource type="Texture2D" uid="uid://cw551dhh2f64r" path="res://Clownvyvyvtgft.png" id="8_rj586"]
 
@@ -43,6 +44,9 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("6_4d7sh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_ir8iy")
 }],
 "loop": true,
 "name": &"walking back",
@@ -76,10 +80,12 @@ position = Vector2(272, 422)
 shape = SubResource("CircleShape2D_0hol4")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=366439171]
-position = Vector2(150, 510.00003)
-scale = Vector2(0.12573244, 0.1464844)
+position = Vector2(163.5, 510.00003)
+scale = Vector2(0.14306639, 0.1464844)
 sprite_frames = SubResource("SpriteFrames_0e48y")
-animation = &"walking back"
+animation = &"Walking right"
+frame = 2
+frame_progress = 0.3875383
 
 [node name="Interaction_Dectector" type="Area2D" parent="." unique_id=570456553]
 monitorable = false

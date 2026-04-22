@@ -10,9 +10,10 @@
 [ext_resource type="Texture2D" uid="uid://dkf5frkw6fs2e" path="res://Girl 11.png" id="7_ir8iy"]
 [ext_resource type="Texture2D" uid="uid://dyyowicway8vo" path="res://Girl 8.png" id="7_x0ka3"]
 [ext_resource type="Texture2D" uid="uid://cw551dhh2f64r" path="res://Clownvyvyvtgft.png" id="8_rj586"]
+[ext_resource type="Script" uid="uid://djkhr647k5xt4" path="res://characterspritev_2.gd" id="14_d2bti"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_0hol4"]
-radius = 80.024994
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ta5nu"]
+size = Vector2(45, 103)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0e48y"]
 animations = [{
@@ -68,7 +69,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q6r6c"]
-size = Vector2(98, 369.25)
+size = Vector2(98, 113)
 
 [node name="Node2D" type="Node2D" unique_id=777989029]
 
@@ -76,16 +77,28 @@ size = Vector2(98, 369.25)
 script = ExtResource("1_0e48y")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D" unique_id=1688248489]
-position = Vector2(272, 422)
-shape = SubResource("CircleShape2D_0hol4")
+position = Vector2(259.5, 422.5)
+shape = SubResource("RectangleShape2D_ta5nu")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=366439171]
-position = Vector2(78, 421)
+[node name="characterspritev2" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=366439171]
+position = Vector2(259, 421)
 scale = Vector2(0.0595703, 0.0595703)
 sprite_frames = SubResource("SpriteFrames_0e48y")
+<<<<<<< HEAD
 animation = &"Walking front"
 frame = 1
 frame_progress = 0.6730872
+=======
+<<<<<<< HEAD
+animation = &"walking left"
+frame_progress = 0.78407526
+script = ExtResource("14_d2bti")
+=======
+animation = &"Walking front"
+frame = 1
+frame_progress = 0.6730872
+>>>>>>> d5b87490c031d76597d97e49fc383dcaeee98732
+>>>>>>> 20f6df59bd998eb042948bda1fee5d489d038c0c
 
 [node name="Interaction_Dectector" type="Area2D" parent="CharacterBody2D" unique_id=570456553]
 collision_layer = 0
@@ -95,11 +108,11 @@ monitorable = false
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/Interaction_Dectector" unique_id=2092571555]
 light_mask = 2
 visibility_layer = 2
-position = Vector2(253, 427.375)
+position = Vector2(253, 421.5)
 shape = SubResource("RectangleShape2D_q6r6c")
 debug_color = Color(0.8194939, 0.2739275, 0.74515384, 0.41960785)
 
-[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=536723950]
+[node name="charactersprite" type="AnimationPlayer" parent="." unique_id=536723950]
 
 [node name="Clownvyvyvtgft" type="Sprite2D" parent="." unique_id=390716036]
 visible = false

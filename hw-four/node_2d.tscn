@@ -89,7 +89,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_q6r6c"]
-size = Vector2(121.5, 94.5)
+size = Vector2(98, 369.25)
 
 [node name="Node2D" type="Node2D" unique_id=777989029]
 
@@ -108,14 +108,17 @@ animation = &"Coin Aniamation"
 frame = 1
 frame_progress = 0.24781428
 
-[node name="Interaction_Dectector" type="Area2D" parent="." unique_id=570456553]
+[node name="Interaction_Dectector" type="Area2D" parent="CharacterBody2D" unique_id=570456553]
+collision_layer = 0
+collision_mask = 2
 monitorable = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Interaction_Dectector" unique_id=2092571555]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D/Interaction_Dectector" unique_id=2092571555]
 light_mask = 2
-visibility_layer = 0
-position = Vector2(290, 290)
+visibility_layer = 2
+position = Vector2(253, 427.375)
 shape = SubResource("RectangleShape2D_q6r6c")
+debug_color = Color(0.8194939, 0.2739275, 0.74515384, 0.41960785)
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=536723950]
 
@@ -124,5 +127,5 @@ position = Vector2(298, 441)
 scale = Vector2(0.30224603, 0.30224603)
 texture = ExtResource("8_rj586")
 
-[connection signal="area_entered" from="Interaction_Dectector" to="CharacterBody2D" method="_on_interaction_dectector_area_entered"]
-[connection signal="area_exited" from="Interaction_Dectector" to="CharacterBody2D" method="_on_interaction_dectector_area_exited"]
+[connection signal="area_entered" from="CharacterBody2D/Interaction_Dectector" to="CharacterBody2D" method="_on_interaction_dectector_area_entered"]
+[connection signal="area_exited" from="CharacterBody2D/Interaction_Dectector" to="CharacterBody2D" method="_on_interaction_dectector_area_exited"]

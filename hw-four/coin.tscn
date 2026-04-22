@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://0aht5psfyc33"]
+
+[ext_resource type="Texture2D" uid="uid://c5qhxvpj6rvqf" path="res://Coin 1.png" id="1_pdq0q"]
+[ext_resource type="Texture2D" uid="uid://cjm66vnfhgq62" path="res://Coin 2.png" id="2_w14il"]
+[ext_resource type="Texture2D" uid="uid://dl1pe72n40t4n" path="res://Coin 3.png" id="3_h4etq"]
+[ext_resource type="Texture2D" uid="uid://c0ilcy08rfsyv" path="res://Coin4.png" id="4_o4fra"]
+
+[sub_resource type="GDScript" id="GDScript_te2np"]
+script/source = "extends interactablev2
+
+func interact():
+	GlobalVariables.coins_collected = GlobalVariables.coins_collected+1
+	print(GlobalVariables.coins_collected)
+	#will need to work on this to make it global but for now it works
+	queue_free()
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_m1j4n"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_pdq0q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_w14il")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_h4etq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_o4fra")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_pdq0q")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="coin" type="Area2D" unique_id=542931823]
+collision_layer = 2
+collision_mask = 0
+script = SubResource("GDScript_te2np")
+metadata/_custom_type_script = "uid://bogmwdj2dxgud"
+
+[node name="Area2D" type="Area2D" parent="." unique_id=37197728]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1286541576]
+position = Vector2(254.99994, 283.25003)
+scale = Vector2(0.14648442, 0.1472168)
+sprite_frames = SubResource("SpriteFrames_m1j4n")
+frame_progress = 0.12923817

@@ -104,9 +104,8 @@ shape = SubResource("CircleShape2D_0hol4")
 position = Vector2(78, 421)
 scale = Vector2(0.0595703, 0.0595703)
 sprite_frames = SubResource("SpriteFrames_0e48y")
-animation = &"Coin Aniamation"
-frame = 1
-frame_progress = 0.24781428
+animation = &"walking left"
+frame_progress = 0.78407526
 
 [node name="Interaction_Dectector" type="Area2D" parent="CharacterBody2D" unique_id=570456553]
 collision_layer = 0
@@ -123,6 +122,7 @@ debug_color = Color(0.8194939, 0.2739275, 0.74515384, 0.41960785)
 [node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=536723950]
 
 [node name="Clownvyvyvtgft" type="Sprite2D" parent="." unique_id=390716036]
+visible = false
 position = Vector2(298, 441)
 scale = Vector2(0.30224603, 0.30224603)
 texture = ExtResource("8_rj586")

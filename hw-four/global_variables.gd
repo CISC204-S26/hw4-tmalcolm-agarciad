@@ -1,13 +1,8 @@
-extends interactablev2
+extends Node
 
-func interact():
-	GlobalVariables.keys_collected = GlobalVariables.keys_collected+1
-	print(GlobalVariables.keys_collected)
-	#will need to work on this to make it global but for now it works
-	queue_free()
-	
+@export var keys_collected = 0
+
 # Called when the node enters the scene tree for the first time.
-	
 func _ready() -> void:
 	pass # Replace with function body.
 

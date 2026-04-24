@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://b112sanoxjaad"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_o6stn"]
+
+[node name="room one" type="Node2D" unique_id=634128178]
+
+[node name="pleaceholder borders" type="MeshInstance2D" parent="." unique_id=2142639881]
+position = Vector2(596.25, 47.75)
+scale = Vector2(1193.5, 96.5)
+mesh = SubResource("BoxMesh_o6stn")
+
+[node name="pleaceholder borders4" type="MeshInstance2D" parent="." unique_id=2013919493]
+position = Vector2(215, 109)
+scale = Vector2(436.5, 96.5)
+mesh = SubResource("BoxMesh_o6stn")
+
+[node name="pleaceholder borders5" type="MeshInstance2D" parent="." unique_id=656676747]
+position = Vector2(940.99994, 109)
+scale = Vector2(436.5, 96.5)
+mesh = SubResource("BoxMesh_o6stn")
+
+[node name="pleaceholder borders2" type="MeshInstance2D" parent="." unique_id=1726680629]
+position = Vector2(159.625, 533.625)
+scale = Vector2(332.75003, 225.24997)
+mesh = SubResource("BoxMesh_o6stn")
+
+[node name="pleaceholder borders3" type="MeshInstance2D" parent="." unique_id=1837773021]
+position = Vector2(984.99994, 533.625)
+scale = Vector2(332.75003, 225.24997)
+mesh = SubResource("BoxMesh_o6stn")

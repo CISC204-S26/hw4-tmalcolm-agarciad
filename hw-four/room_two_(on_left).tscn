@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://deuwxkafaqxof"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_wtip8"]
+
+[node name="room two (on left)" type="Node2D" unique_id=1556146920]
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=1529846079]
+position = Vector2(1480.9999, 40.07584)
+scale = Vector2(2995.9995, 81.15168)
+mesh = SubResource("BoxMesh_wtip8")
+
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="." unique_id=823005014]
+position = Vector2(1495, 627.2051)
+scale = Vector2(3023.9998, 81.91012)
+mesh = SubResource("BoxMesh_wtip8")
+
+[node name="MeshInstance2D3" type="MeshInstance2D" parent="." unique_id=1767112442]
+position = Vector2(14.000122, 331.375)
+scale = Vector2(61.999893, 644.75)
+mesh = SubResource("BoxMesh_wtip8")

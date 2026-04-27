@@ -166,11 +166,11 @@ debug_color = Color(0.576164, 0.54809505, 0.23075733, 0.41960785)
 position = Vector2(763, -177)
 
 [node name="Label" type="Label" parent="." unique_id=1231583166]
-offset_left = 107.0
-offset_top = 595.0
-offset_right = 424.0
-offset_bottom = 723.0
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+offset_left = 109.0
+offset_top = 432.0
+offset_right = 426.0
+offset_bottom = 560.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
 text = "Press E or Click to interact"
 
 [node name="Floorv2" type="Sprite2D" parent="." unique_id=1449938910]

@@ -9,6 +9,10 @@
 [ext_resource type="Script" uid="uid://dgar0xh02yusi" path="res://lastroom.gd" id="5_gtlgj"]
 [ext_resource type="Script" uid="uid://sguw4743owdk" path="res://sign_2r_4.gd" id="6_b3215"]
 [ext_resource type="Texture2D" uid="uid://c74pw58213htd" path="res://all of the assets bc theres gonna be a lot/textbox.png" id="6_itxc0"]
+[ext_resource type="Texture2D" uid="uid://0t0rkv5y3neg" path="res://all of the assets bc theres gonna be a lot/floorv2.png" id="10_gtlgj"]
+[ext_resource type="Script" uid="uid://bvesop8y4uect" path="res://endscreen.gd" id="11_dqpaw"]
+[ext_resource type="AudioStream" uid="uid://b0rrjoq06hrqd" path="res://audio/Shimmer Sound Effect.mp3" id="12_ysiuf"]
+[ext_resource type="Script" uid="uid://lem84ok44c0x" path="res://gemstonesound.gd" id="13_488xh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tsplp"]
 size = Vector2(138, 656)
@@ -24,6 +28,12 @@ radius = 133.45412
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yofy1"]
 size = Vector2(130.5, 167.5)
+
+[sub_resource type="BoxMesh" id="BoxMesh_dqpaw"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_cvh8h"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_ysiuf"]
 
 [node name="top room" type="Node2D" unique_id=450980319]
 
@@ -77,6 +87,7 @@ position = Vector2(8, 92)
 
 [node name="LASTROOM" type="AudioStreamPlayer2D" parent="player character" unique_id=293434611]
 stream = ExtResource("4_yofy1")
+volume_db = -15.878
 script = ExtResource("5_gtlgj")
 
 [node name="SIGN2" type="Area2D" parent="." unique_id=1882593237]
@@ -95,9 +106,9 @@ scale = Vector2(0.08569336, 0.08569336)
 texture = ExtResource("5_b3215")
 
 [node name="sign2r4" type="Label" parent="SIGN2" unique_id=20910504]
-offset_left = 120.0
+offset_left = 153.0
 offset_top = 269.0
-offset_right = 378.0
+offset_right = 411.0
 offset_bottom = 338.0
 text = "Theres no turning back anymore.
 Stuck in this room forever"
@@ -108,3 +119,63 @@ z_index = -1
 position = Vector2(128, 37)
 scale = Vector2(0.1450195, 0.1450195)
 texture = ExtResource("6_itxc0")
+
+[node name="Floorv2" type="Sprite2D" parent="." unique_id=489934203]
+modulate = Color(0.70796657, 0.7079665, 0.7079665, 1)
+z_index = -3
+position = Vector2(570.875, 453.5)
+scale = Vector2(0.23075, 0.23075)
+texture = ExtResource("10_gtlgj")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=464190519]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(575.00006, 20.5)
+scale = Vector2(1156.0001, 67)
+mesh = SubResource("BoxMesh_dqpaw")
+
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="." unique_id=1821193008]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(60.000008, 323.25)
+scale = Vector2(144, 647.5)
+mesh = SubResource("BoxMesh_cvh8h")
+
+[node name="MeshInstance2D3" type="MeshInstance2D" parent="." unique_id=437239138]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(1087, 323.25)
+scale = Vector2(144, 647.5)
+mesh = SubResource("BoxMesh_cvh8h")
+
+[node name="MeshInstance2D4" type="MeshInstance2D" parent="." unique_id=595075757]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(121.75, 602.5)
+scale = Vector2(244.50002, 88.999954)
+mesh = SubResource("BoxMesh_ysiuf")
+
+[node name="MeshInstance2D5" type="MeshInstance2D" parent="." unique_id=152996269]
+modulate = Color(0, 0, 0, 1)
+position = Vector2(988, 602.5)
+scale = Vector2(244.50002, 88.999954)
+mesh = SubResource("BoxMesh_ysiuf")
+
+[node name="endscreen" type="Label" parent="." unique_id=877343852]
+offset_left = 165.0
+offset_top = 462.0
+offset_right = 1057.0
+offset_bottom = 607.0
+theme_override_font_sizes/font_size = 60
+text = "YOU ARE SO RICH NOW!!!!!!!!"
+script = ExtResource("11_dqpaw")
+
+[node name="Label" type="Label" parent="endscreen" unique_id=2038224007]
+layout_mode = 0
+offset_left = 55.0
+offset_top = 67.0
+offset_right = 693.0
+offset_bottom = 94.0
+theme_override_colors/font_color = Color(0.20990813, 0.20990813, 0.2099081, 1)
+theme_override_font_sizes/font_size = 19
+text = "(Game by Ash Garcia-Diaz and Torian Malcom. Thank You for playing!)"
+
+[node name="gemstonesound" type="AudioStreamPlayer2D" parent="endscreen" unique_id=1688774236]
+stream = ExtResource("12_ysiuf")
+script = ExtResource("13_488xh")

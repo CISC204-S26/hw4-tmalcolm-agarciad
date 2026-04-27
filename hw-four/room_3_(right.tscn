@@ -17,6 +17,7 @@
 [ext_resource type="Script" uid="uid://d0mnygjy5ed7q" path="res://key_3.gd" id="12_bo31e"]
 [ext_resource type="Script" uid="uid://bnjnbl0k2lnxf" path="res://rooomthreeee.gd" id="12_fk13b"]
 [ext_resource type="PackedScene" uid="uid://ds5aqbnbdjw26" path="res://key.tscn" id="13_g1auq"]
+[ext_resource type="Texture2D" uid="uid://0t0rkv5y3neg" path="res://all of the assets bc theres gonna be a lot/floorv2.png" id="18_fk13b"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_ls726"]
 
@@ -53,16 +54,19 @@ size = Vector2(38, 491)
 [node name="room 3 (right" type="Node2D" unique_id=275287482]
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=1378594650]
+modulate = Color(0, 0, 0, 1)
 position = Vector2(630.75006, 32.25)
 scale = Vector2(1262.5001, 65.5)
 mesh = SubResource("BoxMesh_ls726")
 
 [node name="MeshInstance2D2" type="MeshInstance2D" parent="." unique_id=852467161]
+modulate = Color(0, 0, 0, 1)
 position = Vector2(630.75006, 622.00006)
 scale = Vector2(1262.5001, 65.5)
 mesh = SubResource("BoxMesh_ls726")
 
 [node name="MeshInstance2D3" type="MeshInstance2D" parent="." unique_id=1867777541]
+modulate = Color(0, 0, 0, 1)
 position = Vector2(1242.5, 332.37503)
 scale = Vector2(39.00008, 644.75006)
 mesh = SubResource("BoxMesh_ls726")
@@ -187,5 +191,11 @@ script = ExtResource("12_bo31e")
 
 [node name="interactablev2" parent="key3" unique_id=1960603387 instance=ExtResource("13_g1auq")]
 position = Vector2(254, -135)
+
+[node name="Floorv2" type="Sprite2D" parent="." unique_id=557700317]
+z_index = -2
+position = Vector2(616.75, 510)
+scale = Vector2(0.2575, 0.2575)
+texture = ExtResource("18_fk13b")
 
 [connection signal="body_entered" from="r3tomainroom" to="r3tomainroom" method="_on_body_entered"]

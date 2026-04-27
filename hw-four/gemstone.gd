@@ -2,6 +2,7 @@ extends interactablev2
 
 func interact():
 	GlobalVariables.gem_collected = true
+	GlobalVariables.sound_the_gem = true
 	queue_free()
 
 

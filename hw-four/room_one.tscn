@@ -9,6 +9,10 @@
 [ext_resource type="PackedScene" uid="uid://0aht5psfyc33" path="res://coin.tscn" id="6_td2yx"]
 [ext_resource type="AudioStream" uid="uid://bkyt30lowg6fo" path="res://audio/Stardew Valley OST - Fall (The Smell of Mushroom).mp3" id="8_vqrey"]
 [ext_resource type="Script" uid="uid://o3e4epe845u7" path="res://roomoneeee.gd" id="9_6c4p8"]
+[ext_resource type="Texture2D" uid="uid://0t0rkv5y3neg" path="res://all of the assets bc theres gonna be a lot/floorv2.png" id="10_6c4p8"]
+[ext_resource type="Texture2D" uid="uid://cji34v3vc5isn" path="res://all of the assets bc theres gonna be a lot/treefr.png" id="11_emdhu"]
+[ext_resource type="AudioStream" uid="uid://3m30kf7t5jq3" path="res://audio/Door Creaking Sound-[AudioTrimmer.com].mp3" id="12_y6sp6"]
+[ext_resource type="Script" uid="uid://cjw0m2qcete8s" path="res://door_2.gd" id="13_nhjeq"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_o6stn"]
 
@@ -16,7 +20,7 @@
 size = Vector2(433, 78.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_btvcd"]
-size = Vector2(443, 159)
+size = Vector2(439.5, 159)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b4w2f"]
 size = Vector2(330, 226.5)
@@ -36,31 +40,48 @@ size = Vector2(171, 260)
 [node name="room one" type="Node2D" unique_id=634128178]
 
 [node name="pleaceholder borders" type="MeshInstance2D" parent="." unique_id=2142639881]
-position = Vector2(596.25, 47.75)
-scale = Vector2(1193.5, 96.5)
+modulate = Color(0, 0, 0, 1)
+z_index = -2
+position = Vector2(227.75, 47.75)
+scale = Vector2(456.49997, 96.5)
+mesh = SubResource("BoxMesh_o6stn")
+
+[node name="pleaceholder borders6" type="MeshInstance2D" parent="." unique_id=2013459421]
+modulate = Color(0, 0, 0, 1)
+z_index = -2
+position = Vector2(933.00006, 47.75)
+scale = Vector2(456.49997, 96.5)
 mesh = SubResource("BoxMesh_o6stn")
 
 [node name="pleaceholder borders4" type="MeshInstance2D" parent="." unique_id=2013919493]
+modulate = Color(0, 0, 0, 1)
+z_index = -2
 position = Vector2(215, 109)
 scale = Vector2(436.5, 96.5)
 mesh = SubResource("BoxMesh_o6stn")
 
 [node name="pleaceholder borders5" type="MeshInstance2D" parent="." unique_id=656676747]
-position = Vector2(940.99994, 109)
-scale = Vector2(436.5, 96.5)
+modulate = Color(0, 0, 0, 1)
+self_modulate = Color(0, 0, 0, 1)
+z_index = -2
+position = Vector2(930.125, 109)
+scale = Vector2(458.24988, 96.5)
 mesh = SubResource("BoxMesh_o6stn")
 
 [node name="pleaceholder borders2" type="MeshInstance2D" parent="." unique_id=1726680629]
+modulate = Color(0, 0, 0, 1)
 position = Vector2(159.625, 533.625)
 scale = Vector2(332.75003, 225.24997)
 mesh = SubResource("BoxMesh_o6stn")
 
 [node name="pleaceholder borders3" type="MeshInstance2D" parent="." unique_id=1837773021]
+modulate = Color(0, 0, 0, 1)
 position = Vector2(984.99994, 533.625)
 scale = Vector2(332.75003, 225.24997)
 mesh = SubResource("BoxMesh_o6stn")
 
 [node name="door" parent="." unique_id=273619539 instance=ExtResource("1_l23dm")]
+z_index = -1
 position = Vector2(22, -181)
 
 [node name="player character" parent="." unique_id=1515688360 instance=ExtResource("2_3qj7h")]
@@ -98,7 +119,7 @@ position = Vector2(939, 48)
 shape = SubResource("RectangleShape2D_osqrw")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1967300220]
-position = Vector2(223, 76)
+position = Vector2(224.75, 76)
 shape = SubResource("RectangleShape2D_btvcd")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=794736831]
@@ -142,7 +163,7 @@ shape = SubResource("RectangleShape2D_rtxd7")
 debug_color = Color(0.576164, 0.54809505, 0.23075733, 0.41960785)
 
 [node name="coin" parent="." unique_id=542931823 instance=ExtResource("6_td2yx")]
-position = Vector2(185, -123)
+position = Vector2(763, -177)
 
 [node name="Label" type="Label" parent="." unique_id=1231583166]
 offset_left = 107.0
@@ -151,6 +172,31 @@ offset_right = 424.0
 offset_bottom = 723.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Press E or Click to interact"
+
+[node name="Floorv2" type="Sprite2D" parent="." unique_id=1449938910]
+z_index = -3
+position = Vector2(579.625, 467.5)
+scale = Vector2(0.23225, 0.23225)
+texture = ExtResource("10_6c4p8")
+
+[node name="Floorv3" type="Sprite2D" parent="." unique_id=452040928]
+modulate = Color(0.39181867, 0.39181864, 0.39181864, 1)
+z_index = -3
+position = Vector2(579.625, -307)
+scale = Vector2(0.23225, 0.23225)
+texture = ExtResource("10_6c4p8")
+
+[node name="Treefr" type="Sprite2D" parent="." unique_id=1585357540]
+modulate = Color(0.5636256, 0.5636255, 0.5636255, 1)
+z_index = -1
+position = Vector2(576, 311)
+scale = Vector2(0.17449997, 0.1745)
+texture = ExtResource("11_emdhu")
+
+[node name="door2" type="AudioStreamPlayer2D" parent="." unique_id=1736226897]
+position = Vector2(571, 139)
+stream = ExtResource("12_y6sp6")
+script = ExtResource("13_nhjeq")
 
 [connection signal="area_entered" from="r1 left room" to="r1 left room" method="_on_area_entered"]
 [connection signal="body_entered" from="r1 left room" to="r1 left room" method="_on_body_entered"]

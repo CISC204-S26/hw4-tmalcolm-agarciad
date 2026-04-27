@@ -1,5 +1,8 @@
 extends Node
 
+var door_open = false
+var sound_the_gem = false
+
 var keys_collected = 0
 var coins_collected = 0
 var bones_collected = 0

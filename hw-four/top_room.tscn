@@ -1,0 +1,104 @@
+[gd_scene format=3 uid="uid://b8453pqu3qdfx"]
+
+[ext_resource type="Script" uid="uid://bq2x54l5ejbph" path="res://gemstone.gd" id="1_mkja2"]
+[ext_resource type="Texture2D" uid="uid://b6c6tqslnokq3" path="res://all of the assets bc theres gonna be a lot/gemstone.png" id="2_e3dau"]
+[ext_resource type="PackedScene" uid="uid://dgo0jo5ktx6rf" path="res://player_character.tscn" id="3_e3dau"]
+[ext_resource type="Script" uid="uid://bbmtksgumt88g" path="res://sign_2.gd" id="4_7dsrc"]
+[ext_resource type="Texture2D" uid="uid://wbgw4dc48rc" path="res://all of the assets bc theres gonna be a lot/IMG_0407.png" id="5_b3215"]
+[ext_resource type="Script" uid="uid://sguw4743owdk" path="res://sign_2r_4.gd" id="6_b3215"]
+[ext_resource type="Texture2D" uid="uid://c74pw58213htd" path="res://all of the assets bc theres gonna be a lot/textbox.png" id="6_itxc0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tsplp"]
+size = Vector2(138, 656)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cgthr"]
+size = Vector2(1105, 69)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mkja2"]
+size = Vector2(255, 88)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wixkd"]
+radius = 133.45412
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yofy1"]
+size = Vector2(130.5, 167.5)
+
+[node name="top room" type="Node2D" unique_id=450980319]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=483913531]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=554836334]
+position = Vector2(59, 318)
+shape = SubResource("RectangleShape2D_tsplp")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1333086313]
+position = Vector2(1086, 318)
+shape = SubResource("RectangleShape2D_tsplp")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=540174859]
+position = Vector2(542.5, 19.5)
+shape = SubResource("RectangleShape2D_cgthr")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=1087613805]
+position = Vector2(542.5, 19.5)
+shape = SubResource("RectangleShape2D_cgthr")
+
+[node name="CollisionShape2D7" type="CollisionShape2D" parent="StaticBody2D" unique_id=1255969129]
+position = Vector2(542.5, 681)
+shape = SubResource("RectangleShape2D_cgthr")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D" unique_id=2134675090]
+position = Vector2(117.5, 602)
+shape = SubResource("RectangleShape2D_mkja2")
+
+[node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D" unique_id=372291274]
+position = Vector2(996, 602)
+shape = SubResource("RectangleShape2D_mkja2")
+
+[node name="gemstone" type="Area2D" parent="." unique_id=1100658396]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_mkja2")
+metadata/_custom_type_script = "uid://bogmwdj2dxgud"
+
+[node name="Sprite2D" type="Sprite2D" parent="gemstone" unique_id=717699937]
+position = Vector2(557, 311)
+scale = Vector2(0.08496094, 0.08496094)
+texture = ExtResource("2_e3dau")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="gemstone" unique_id=901657583]
+position = Vector2(557, 296)
+shape = SubResource("CircleShape2D_wixkd")
+
+[node name="player character" parent="." unique_id=1184873923 instance=ExtResource("3_e3dau")]
+position = Vector2(8, 92)
+
+[node name="SIGN2" type="Area2D" parent="." unique_id=1882593237]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("4_7dsrc")
+metadata/_custom_type_script = "uid://bogmwdj2dxgud"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SIGN2" unique_id=1640560767]
+position = Vector2(229.75, 172.25)
+shape = SubResource("RectangleShape2D_yofy1")
+
+[node name="Sprite2D" type="Sprite2D" parent="SIGN2" unique_id=1516634876]
+position = Vector2(232, 161)
+scale = Vector2(0.08569336, 0.08569336)
+texture = ExtResource("5_b3215")
+
+[node name="sign2r4" type="Label" parent="SIGN2" unique_id=20910504]
+offset_left = 120.0
+offset_top = 269.0
+offset_right = 378.0
+offset_bottom = 338.0
+text = "Theres no turning back anymore.
+Stuck in this room forever"
+script = ExtResource("6_b3215")
+
+[node name="Sprite2D2" type="Sprite2D" parent="SIGN2/sign2r4" unique_id=991059426]
+z_index = -1
+position = Vector2(128, 37)
+scale = Vector2(0.1450195, 0.1450195)
+texture = ExtResource("6_itxc0")

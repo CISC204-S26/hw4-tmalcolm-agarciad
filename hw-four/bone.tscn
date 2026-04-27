@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://b0jr0gh2i2s7p"]
+
+[sub_resource type="GDScript" id="GDScript_h5ww6"]
+script/source = "extends interactablev2
+
+
+func interact():
+	GlobalVariables.bones_collected = GlobalVariables.bones_collected+1
+	queue_free()
+	print(GlobalVariables.bones_collected)
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jhw1f"]
+size = Vector2(212, 93)
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_wyi0r"]
+
+[node name="bone" type="Area2D" unique_id=288959181]
+collision_layer = 2
+collision_mask = 0
+script = SubResource("GDScript_h5ww6")
+metadata/_custom_type_script = "uid://bogmwdj2dxgud"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=764504741]
+position = Vector2(420, 221.5)
+shape = SubResource("RectangleShape2D_jhw1f")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=654091769]
+visible = false
+position = Vector2(421, 222)
+scale = Vector2(102.49999, 13.000005)
+mesh = SubResource("CapsuleMesh_wyi0r")

@@ -1,8 +1,67 @@
 [gd_scene format=3 uid="uid://deuwxkafaqxof"]
 
+[ext_resource type="Texture2D" uid="uid://cwl1cu43wfv5" path="res://all of the assets bc theres gonna be a lot/WhatsApp_Image_2026-04-24_at_4.31.36_PM-removebg-preview.png" id="1_42abx"]
+[ext_resource type="Script" uid="uid://b3hr1ln5m5gbl" path="res://luna.gd" id="1_f67eo"]
+[ext_resource type="Texture2D" uid="uid://7orf6afkwh1i" path="res://all of the assets bc theres gonna be a lot/WhatsApp_Image_2026-04-24_at_4.36.21_PM-removebg-preview.png" id="2_2mi8r"]
+[ext_resource type="Script" uid="uid://bon06f332q4kl" path="res://testing.gd" id="3_4ex1j"]
+[ext_resource type="Texture2D" uid="uid://cp3u2ld0xpe7m" path="res://all of the assets bc theres gonna be a lot/image-removebg-preview.png" id="3_pkuhy"]
+[ext_resource type="Texture2D" uid="uid://c74pw58213htd" path="res://all of the assets bc theres gonna be a lot/textbox.png" id="5_fypyr"]
+[ext_resource type="Script" uid="uid://b774fke5k6usa" path="res://pj_2.gd" id="5_j53t1"]
+[ext_resource type="PackedScene" uid="uid://ds5aqbnbdjw26" path="res://key.tscn" id="5_pkuhy"]
+[ext_resource type="PackedScene" uid="uid://b0jr0gh2i2s7p" path="res://bone.tscn" id="6_8mw5g"]
+[ext_resource type="Script" uid="uid://cj0twtj2rsaa" path="res://luna_dialogue_two.gd" id="6_vc2au"]
+[ext_resource type="PackedScene" uid="uid://dgo0jo5ktx6rf" path="res://player_character.tscn" id="8_q86po"]
+[ext_resource type="Texture2D" uid="uid://dobnhlmnqenco" path="res://all of the assets bc theres gonna be a lot/bone3.png" id="8_r65xk"]
+[ext_resource type="Script" uid="uid://d165q3j50o31r" path="res://to_the_left_to_the_left.gd" id="9_bw0ct"]
+[ext_resource type="Script" uid="uid://bfsi5c7b4fhh0" path="res://pj_1.gd" id="9_j5s56"]
+[ext_resource type="Script" uid="uid://qt2gnelriyvp" path="res://key visisbility 2.gd" id="10_6g342"]
+[ext_resource type="Script" uid="uid://bb45k5yjvl6hu" path="res://pj_2_di.gd" id="10_8feem"]
+[ext_resource type="Texture2D" uid="uid://dhps2ubqr6akm" path="res://all of the assets bc theres gonna be a lot/bone.png" id="10_j53t1"]
+[ext_resource type="Script" uid="uid://bj8m4yo8wim1q" path="res://niebla_2.gd" id="11_cvwsf"]
+[ext_resource type="Texture2D" uid="uid://clgxyds40gel1" path="res://all of the assets bc theres gonna be a lot/bone2.png" id="11_fypyr"]
+[ext_resource type="Script" uid="uid://b7a7na7x0a21e" path="res://nieblad_1.gd" id="13_3ayf4"]
+[ext_resource type="Script" uid="uid://de5ydrclwv04d" path="res://nieblad_2.gd" id="14_cvwsf"]
+[ext_resource type="Texture2D" uid="uid://cdbpkg6x1cr1m" path="res://all of the assets bc theres gonna be a lot/treetwo.png" id="22_yr7jy"]
+[ext_resource type="Texture2D" uid="uid://c0v2w5jy2i1c0" path="res://all of the assets bc theres gonna be a lot/treeone.png" id="23_5aj27"]
+[ext_resource type="Script" uid="uid://dhkhdgsmfm6pp" path="res://signone_.gd" id="24_yr7jy"]
+[ext_resource type="Texture2D" uid="uid://5urgqv8f6mar" path="res://all of the assets bc theres gonna be a lot/sign.png" id="25_m2040"]
+[ext_resource type="Script" uid="uid://b545wx70a7anu" path="res://sign_1.gd" id="26_qnxmj"]
+[ext_resource type="PackedScene" uid="uid://0aht5psfyc33" path="res://coin.tscn" id="27_5aj27"]
+
 [sub_resource type="BoxMesh" id="BoxMesh_wtip8"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pkuhy"]
+size = Vector2(161, 364)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2mi8r"]
+size = Vector2(139.5, 370)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_42abx"]
+size = Vector2(220.5, 366)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4ex1j"]
+size = Vector2(114, 477)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6g342"]
+size = Vector2(3027, 89)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2oys6"]
+size = Vector2(59, 635)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0ddim"]
+size = Vector2(136, 147.5)
+
 [node name="room two (on left)" type="Node2D" unique_id=1556146920]
+
+[node name="player character" parent="." unique_id=1515688360 instance=ExtResource("8_q86po")]
+position = Vector2(2263, -108)
+
+[node name="Camera2D" type="Camera2D" parent="player character" unique_id=1375268948]
+position = Vector2(570, 458)
+limit_left = 0
+limit_top = 0
+limit_right = 2960
+limit_bottom = 650
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=1529846079]
 position = Vector2(1480.9999, 40.07584)
@@ -18,3 +77,274 @@ mesh = SubResource("BoxMesh_wtip8")
 position = Vector2(14.000122, 331.375)
 scale = Vector2(61.999893, 644.75)
 mesh = SubResource("BoxMesh_wtip8")
+
+[node name="Luna" type="Area2D" parent="." unique_id=2075040658]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_f67eo")
+metadata/_custom_type_script = "uid://bogmwdj2dxgud"
+
+[node name="Luna" type="Sprite2D" parent="Luna" unique_id=952824706]
+position = Vector2(2191, 160)
+scale = Vector2(0.45597595, 0.45597595)
+texture = ExtResource("2_2mi8r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Luna" unique_id=1894815681]
+position = Vector2(2221.25, 222)
+shape = SubResource("RectangleShape2D_pkuhy")
+debug_color = Color(0.7543009, 0.3079291, 0.84590954, 0.41960785)
+
+[node name="Luna Dialogue One" type="Label" parent="Luna" unique_id=1329731701]
+visible = false
+offset_left = 2136.0
+offset_top = 299.0
+offset_right = 2313.0
+offset_bottom = 355.0
+theme_override_colors/font_color = Color(0.6946975, 0.8947457, 0.25839776, 1)
+theme_override_font_sizes/font_size = 13
+text = "Hello it is I, the hungry
+wise dog. My name is Luna"
+script = ExtResource("3_4ex1j")
+
+[node name="Sprite2D" type="Sprite2D" parent="Luna/Luna Dialogue One" unique_id=4411215]
+z_index = -1
+position = Vector2(88.00006, 22.999985)
+scale = Vector2(0.10449219, 0.10449219)
+texture = ExtResource("5_fypyr")
+
+[node name="Label" type="Label" parent="Luna/Luna Dialogue One" unique_id=283922308]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 54.0
+offset_right = 173.0
+offset_bottom = 77.0
+theme_override_colors/font_color = Color(0.5931336, 0.59313357, 0.59313357, 1)
+theme_override_font_sizes/font_size = 9
+text = "(press space to stop talking to people)"
+
+[node name="Luna Dialogue Two" type="Label" parent="Luna" unique_id=1253847546]
+offset_left = 2136.0
+offset_top = 299.0
+offset_right = 2313.0
+offset_bottom = 355.0
+theme_override_colors/font_color = Color(0.6946975, 0.8947457, 0.25839776, 1)
+theme_override_font_sizes/font_size = 13
+text = "Thank you human. My 
+hunger cannot be satiated 
+but it's the thought that counts"
+script = ExtResource("6_vc2au")
+
+[node name="Sprite2D" type="Sprite2D" parent="Luna/Luna Dialogue Two" unique_id=948630968]
+z_index = -1
+position = Vector2(104.99989, 33.999996)
+scale = Vector2(0.12500007, 0.12500007)
+texture = ExtResource("5_fypyr")
+
+[node name="PJ2" type="Area2D" parent="." unique_id=259235229]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("5_j53t1")
+metadata/_custom_type_script = "uid://bogmwdj2dxgud"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PJ2" unique_id=460076974]
+position = Vector2(1991, 218)
+shape = SubResource("RectangleShape2D_2mi8r")
+debug_color = Color(0.75320417, 0.31478745, 0.8349496, 0.41960785)
+
+[node name="PJ2" type="Sprite2D" parent="PJ2" unique_id=296370772]
+position = Vector2(1997, 184)
+scale = Vector2(0.41859147, 0.4185915)
+texture = ExtResource("3_pkuhy")
+
+[node name="pj1" type="Label" parent="PJ2" unique_id=650824149]
+visible = false
+offset_left = 1881.0
+offset_top = 298.0
+offset_right = 2100.0
+offset_bottom = 357.0
+theme_override_colors/font_color = Color(0.69411767, 0.89411765, 0.25882354, 1)
+theme_override_font_sizes/font_size = 13
+text = "Hello it is I PJ. We three are sooooo
+ hungry we may wither away. bring
+us three bones for a reward."
+script = ExtResource("9_j5s56")
+
+[node name="Sprite2D" type="Sprite2D" parent="PJ2/pj1" unique_id=1396107693]
+z_index = -1
+position = Vector2(110, 33)
+scale = Vector2(0.12500007, 0.12500007)
+texture = ExtResource("5_fypyr")
+
+[node name="pj2_di" type="Label" parent="PJ2" unique_id=1414329217]
+offset_left = 1881.0
+offset_top = 299.0
+offset_right = 2101.0
+offset_bottom = 357.0
+theme_override_colors/font_color = Color(0.69411767, 0.89411765, 0.25882354, 1)
+theme_override_font_sizes/font_size = 13
+text = "Thank you human. Go to Luna for 
+your reward. I must sleep now."
+script = ExtResource("10_8feem")
+
+[node name="Sprite2D2" type="Sprite2D" parent="PJ2/pj2_di" unique_id=1331948420]
+z_index = -1
+position = Vector2(110, 32)
+scale = Vector2(0.12500007, 0.12500007)
+texture = ExtResource("5_fypyr")
+
+[node name="Niebla2" type="Area2D" parent="." unique_id=1882255621]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("11_cvwsf")
+metadata/_custom_type_script = "uid://bogmwdj2dxgud"
+
+[node name="Niebla" type="Sprite2D" parent="Niebla2" unique_id=2106007282]
+position = Vector2(1707, 109.00001)
+scale = Vector2(0.70323336, 0.70323336)
+texture = ExtResource("1_42abx")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Niebla2" unique_id=281071012]
+position = Vector2(1757, 218)
+shape = SubResource("RectangleShape2D_42abx")
+debug_color = Color(0.7384152, 0.33546162, 0.82519627, 0.41960785)
+
+[node name="nieblad1" type="Label" parent="Niebla2" unique_id=1764905054]
+visible = false
+offset_left = 1651.0
+offset_top = 298.0
+offset_right = 1858.0
+offset_bottom = 388.0
+theme_override_colors/font_color = Color(0.69411767, 0.89411765, 0.25882354, 1)
+theme_override_font_sizes/font_size = 13
+text = "im going to enter your room 
+while you sleep and wake you
+up with a wet nose to the face."
+script = ExtResource("13_3ayf4")
+
+[node name="Sprite2D" type="Sprite2D" parent="Niebla2/nieblad1" unique_id=1218295958]
+z_index = -1
+position = Vector2(105, 32)
+scale = Vector2(0.12500007, 0.12500007)
+texture = ExtResource("5_fypyr")
+
+[node name="nieblad2" type="Label" parent="Niebla2" unique_id=981075819]
+offset_left = 1651.0
+offset_top = 298.0
+offset_right = 1858.0
+offset_bottom = 388.0
+theme_override_colors/font_color = Color(0.69411767, 0.89411765, 0.25882354, 1)
+theme_override_font_sizes/font_size = 13
+text = "you kind of just took my bone 
+from me and then brought it back.
+I'm still waking you up at 6 am."
+script = ExtResource("14_cvwsf")
+
+[node name="Sprite2D" type="Sprite2D" parent="Niebla2/nieblad2" unique_id=1262327255]
+z_index = -1
+position = Vector2(105, 32)
+scale = Vector2(0.12500007, 0.12500007)
+texture = ExtResource("5_fypyr")
+
+[node name="to the left to the left" type="Area2D" parent="." unique_id=2120182959]
+script = ExtResource("9_bw0ct")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="to the left to the left" unique_id=63596566]
+position = Vector2(2968, 336.5)
+shape = SubResource("RectangleShape2D_4ex1j")
+debug_color = Color(0.55838025, 0.55435246, 0.2481586, 0.41960785)
+
+[node name="room barriers" type="StaticBody2D" parent="." unique_id=240435064]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="room barriers" unique_id=556243631]
+position = Vector2(1503.5, 34.5)
+shape = SubResource("RectangleShape2D_6g342")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="room barriers" unique_id=1706215807]
+position = Vector2(1503.5, 635)
+shape = SubResource("RectangleShape2D_6g342")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="room barriers" unique_id=1394955990]
+position = Vector2(19.5, 307.5)
+shape = SubResource("RectangleShape2D_2oys6")
+
+[node name="Node2D" type="Node2D" parent="." unique_id=241743658]
+script = ExtResource("10_6g342")
+
+[node name="interactablev2" parent="Node2D" unique_id=1960603387 instance=ExtResource("5_pkuhy")]
+position = Vector2(1920, -149)
+
+[node name="boneone" parent="." unique_id=1929296732 instance=ExtResource("6_8mw5g")]
+position = Vector2(-109, 97)
+
+[node name="Sprite2D" type="Sprite2D" parent="boneone" unique_id=593901280]
+position = Vector2(429, 227)
+scale = Vector2(0.08691406, 0.08691406)
+texture = ExtResource("10_j53t1")
+
+[node name="bonetwo" parent="." unique_id=288959181 instance=ExtResource("6_8mw5g")]
+position = Vector2(517, 287)
+
+[node name="Sprite2D" type="Sprite2D" parent="bonetwo" unique_id=318488510]
+position = Vector2(441, 219)
+scale = Vector2(0.096435554, 0.096435554)
+texture = ExtResource("11_fypyr")
+
+[node name="bonethree" parent="." unique_id=1883384741 instance=ExtResource("6_8mw5g")]
+position = Vector2(1067, 8)
+
+[node name="Sprite2D" type="Sprite2D" parent="bonethree" unique_id=1492065761]
+position = Vector2(439, 227)
+scale = Vector2(0.086303726, 0.086303726)
+texture = ExtResource("8_r65xk")
+
+[node name="inconvenient tree" type="Sprite2D" parent="." unique_id=714876348]
+z_index = 1
+position = Vector2(323, 383)
+scale = Vector2(0.23034665, 0.23034665)
+texture = ExtResource("22_yr7jy")
+
+[node name="just a tree" type="Sprite2D" parent="." unique_id=940926082]
+z_index = 1
+position = Vector2(917, 137)
+scale = Vector2(0.23828126, 0.23828126)
+texture = ExtResource("23_5aj27")
+
+[node name="signone_" type="Area2D" parent="." unique_id=1316103097]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("24_yr7jy")
+metadata/_custom_type_script = "uid://bogmwdj2dxgud"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="signone_" unique_id=994460077]
+position = Vector2(615, 479.75)
+shape = SubResource("RectangleShape2D_0ddim")
+
+[node name="Sprite2D" type="Sprite2D" parent="signone_" unique_id=1957148102]
+position = Vector2(616, 471.99997)
+scale = Vector2(0.093872085, 0.093872085)
+texture = ExtResource("25_m2040")
+
+[node name="sign1" type="Sprite2D" parent="signone_" unique_id=801365884]
+z_index = 1
+position = Vector2(625, 461)
+scale = Vector2(0.12500007, 0.12500007)
+texture = ExtResource("5_fypyr")
+script = ExtResource("26_qnxmj")
+
+[node name="Label" type="Label" parent="signone_/sign1" unique_id=667942067]
+z_index = 2
+offset_left = -855.9995
+offset_top = -231.99976
+offset_right = 871.9995
+offset_bottom = 192.0
+theme_override_font_sizes/font_size = 100
+text = "If you find youself stuck, trees are 
+wise. try asking them."
+
+[node name="coin" parent="." unique_id=542931823 instance=ExtResource("27_5aj27")]
+position = Vector2(-17, -242)
+
+[node name="coin2" parent="." unique_id=692704819 instance=ExtResource("27_5aj27")]
+position = Vector2(1133, -8)
+
+[connection signal="body_entered" from="to the left to the left" to="to the left to the left" method="_on_body_entered"]

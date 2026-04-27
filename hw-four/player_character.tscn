@@ -2,23 +2,34 @@
 
 [ext_resource type="Script" uid="uid://bt6mh1vokmlft" path="res://player_character.gd" id="1_02ohv"]
 [ext_resource type="PackedScene" uid="uid://da0gjk6n6wkp5" path="res://interactable.tscn" id="2_5up26"]
-[ext_resource type="Texture2D" uid="uid://ddcxeuuebft8e" path="res://Girl 9.png" id="3_bgme8"]
-[ext_resource type="Texture2D" uid="uid://divptttmptjcd" path="res://Girl 10.png" id="4_g1g7m"]
-[ext_resource type="Texture2D" uid="uid://dkf5frkw6fs2e" path="res://Girl 11.png" id="5_pi6eu"]
-[ext_resource type="Texture2D" uid="uid://ca18qkjpbq7c2" path="res://Girl 1.png" id="6_ha3ud"]
-[ext_resource type="Texture2D" uid="uid://cstpwso2uf4ix" path="res://Girl 2.png" id="7_bi50n"]
-[ext_resource type="Texture2D" uid="uid://dctdq7di8rlx8" path="res://Girl 3.png" id="8_od4g1"]
-[ext_resource type="Texture2D" uid="uid://bx631q6a8vxjh" path="res://Girl 7.png" id="9_43oxn"]
-[ext_resource type="Texture2D" uid="uid://dyyowicway8vo" path="res://Girl 8.png" id="10_1oirj"]
-[ext_resource type="Texture2D" uid="uid://bpurnkcrj5oe" path="res://Girl 4.png" id="11_bgamr"]
-[ext_resource type="Texture2D" uid="uid://mfqwhpkyhcem" path="res://Girl 5.png" id="12_4oir7"]
-[ext_resource type="Script" uid="uid://3ft3kvelja6e" path="res://animated_sprite_2d.gd" id="13_vigrq"]
+[ext_resource type="Texture2D" uid="uid://ddcxeuuebft8e" path="res://all of the assets bc theres gonna be a lot/Girl 9.png" id="3_bgme8"]
+[ext_resource type="Texture2D" uid="uid://b2mr0upwc6trv" path="res://all of the assets bc theres gonna be a lot/idle.png" id="3_g1g7m"]
+[ext_resource type="Texture2D" uid="uid://divptttmptjcd" path="res://all of the assets bc theres gonna be a lot/Girl 10.png" id="4_g1g7m"]
+[ext_resource type="Texture2D" uid="uid://dkf5frkw6fs2e" path="res://all of the assets bc theres gonna be a lot/Girl 11.png" id="5_pi6eu"]
+[ext_resource type="Texture2D" uid="uid://ca18qkjpbq7c2" path="res://all of the assets bc theres gonna be a lot/Girl 1.png" id="6_ha3ud"]
+[ext_resource type="Texture2D" uid="uid://cstpwso2uf4ix" path="res://all of the assets bc theres gonna be a lot/Girl 2.png" id="7_bi50n"]
+[ext_resource type="Texture2D" uid="uid://dctdq7di8rlx8" path="res://all of the assets bc theres gonna be a lot/Girl 3.png" id="8_od4g1"]
+[ext_resource type="Texture2D" uid="uid://bx631q6a8vxjh" path="res://all of the assets bc theres gonna be a lot/Girl 7.png" id="9_43oxn"]
+[ext_resource type="Texture2D" uid="uid://dyyowicway8vo" path="res://all of the assets bc theres gonna be a lot/Girl 8.png" id="10_1oirj"]
+[ext_resource type="Texture2D" uid="uid://bpurnkcrj5oe" path="res://all of the assets bc theres gonna be a lot/Girl 4.png" id="11_bgamr"]
+[ext_resource type="Texture2D" uid="uid://mfqwhpkyhcem" path="res://all of the assets bc theres gonna be a lot/Girl 5.png" id="12_4oir7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_bgme8"]
 size = Vector2(124, 199)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_fiymq"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_g1g7m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_bi50n")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 1.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("3_bgme8")
@@ -76,33 +87,66 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="GDScript" id="GDScript_bgme8"]
+script/source = "extends AnimatedSprite2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+	play(\"idle\")
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+	if Input.is_action_pressed(\"Left\"):
+		play(\"walk_left\")
+	if Input.is_action_pressed(\"Right\"):
+		play(\"walk_right\")
+	if Input.is_action_pressed(\"Down\"):
+		play(\"walk_front\")
+	if Input.is_action_pressed(\"Up\"):
+		play(\"walk_back\")
+	if Input.is_action_just_released(\"Down\"):
+		play(\"idle\")
+	if Input.is_action_just_released(\"Left\"):
+		play(\"idle\")
+	if Input.is_action_just_released(\"Right\"):
+		play(\"idle\")
+	if Input.is_action_just_released(\"Up\"):
+		play(\"idle\")
+"
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g1g7m"]
 size = Vector2(73, 141.5)
 
-[node name="player character" type="Node2D" unique_id=1515688360]
-
-[node name="player character" type="CharacterBody2D" parent="." unique_id=1184873923]
+[node name="player character" type="CharacterBody2D" unique_id=1184873923]
 script = ExtResource("1_02ohv")
 
-[node name="interactable" parent="player character" unique_id=2048269213 instance=ExtResource("2_5up26")]
+[node name="interactable" parent="." unique_id=2048269213 instance=ExtResource("2_5up26")]
 collision_layer = 0
 collision_mask = 2
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="player character/interactable" unique_id=969969307]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="interactable" unique_id=969969307]
 position = Vector2(549, 456.5)
 shape = SubResource("RectangleShape2D_bgme8")
 debug_color = Color(0.72879094, 0.34127823, 0.8338702, 0.41960785)
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="player character" unique_id=507790825]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=507790825]
 position = Vector2(543, 459.99997)
 scale = Vector2(0.08386235, 0.08386235)
 sprite_frames = SubResource("SpriteFrames_fiymq")
-animation = &"walk_back"
-script = ExtResource("13_vigrq")
+animation = &"idle"
+frame = 1
+frame_progress = 0.49082848
+script = SubResource("GDScript_bgme8")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="player character" unique_id=1321999533]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1321999533]
 position = Vector2(548.5, 461.25)
 shape = SubResource("RectangleShape2D_g1g7m")
 
-[connection signal="area_entered" from="player character/interactable" to="player character" method="_on_interaction_dectector_area_entered"]
-[connection signal="area_exited" from="player character/interactable" to="player character" method="_on_interaction_dectector_area_exited"]
+[node name="player character" type="Node2D" parent="." unique_id=1515688360]
+position = Vector2(97, 67)
+
+[connection signal="area_entered" from="interactable" to="." method="_on_interaction_dectector_area_entered"]
+[connection signal="area_exited" from="interactable" to="." method="_on_interaction_dectector_area_exited"]

@@ -1,0 +1,170 @@
+[gd_scene format=3 uid="uid://b1878eg223v6g"]
+
+[ext_resource type="Script" uid="uid://d182vafuc26mt" path="res://shopkeeper.gd" id="1_ls726"]
+[ext_resource type="Texture2D" uid="uid://c2fl2wjlk4n37" path="res://all of the assets bc theres gonna be a lot/frame1.png" id="2_0uynx"]
+[ext_resource type="Texture2D" uid="uid://bku5tckxvnumo" path="res://all of the assets bc theres gonna be a lot/frame2.png" id="3_lsdlt"]
+[ext_resource type="Script" uid="uid://ntieh6pn5iji" path="res://shop.gd" id="4_jyd35"]
+[ext_resource type="PackedScene" uid="uid://dgo0jo5ktx6rf" path="res://player_character.tscn" id="5_0uynx"]
+[ext_resource type="Script" uid="uid://dr6yox81hucxh" path="res://shopkeep_1.gd" id="5_jphpi"]
+[ext_resource type="Texture2D" uid="uid://c74pw58213htd" path="res://all of the assets bc theres gonna be a lot/textbox.png" id="6_8db4n"]
+[ext_resource type="Script" uid="uid://b7abypd3goacu" path="res://r_3_tomainroom.gd" id="6_lsdlt"]
+[ext_resource type="Script" uid="uid://dk8gfrwbcru07" path="res://shopkeep_2.gd" id="7_8db4n"]
+[ext_resource type="PackedScene" uid="uid://0aht5psfyc33" path="res://coin.tscn" id="7_jyd35"]
+[ext_resource type="Texture2D" uid="uid://c0v2w5jy2i1c0" path="res://all of the assets bc theres gonna be a lot/treeone.png" id="8_dwvh3"]
+[ext_resource type="Script" uid="uid://d0mnygjy5ed7q" path="res://key_3.gd" id="12_bo31e"]
+[ext_resource type="PackedScene" uid="uid://ds5aqbnbdjw26" path="res://key.tscn" id="13_g1auq"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_ls726"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dwvh3"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_0uynx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_lsdlt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_lsdlt")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 3.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_msryb"]
+radius = 127.0
+height = 422.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0uynx"]
+size = Vector2(1270, 91)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lsdlt"]
+size = Vector2(39, 562)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jyd35"]
+size = Vector2(38, 491)
+
+[node name="room 3 (right" type="Node2D" unique_id=275287482]
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=1378594650]
+position = Vector2(630.75006, 32.25)
+scale = Vector2(1262.5001, 65.5)
+mesh = SubResource("BoxMesh_ls726")
+
+[node name="MeshInstance2D2" type="MeshInstance2D" parent="." unique_id=852467161]
+position = Vector2(630.75006, 622.00006)
+scale = Vector2(1262.5001, 65.5)
+mesh = SubResource("BoxMesh_ls726")
+
+[node name="MeshInstance2D3" type="MeshInstance2D" parent="." unique_id=1867777541]
+position = Vector2(1242.5, 332.37503)
+scale = Vector2(39.00008, 644.75006)
+mesh = SubResource("BoxMesh_ls726")
+
+[node name="shopkeeper" type="Area2D" parent="." unique_id=292538179]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_ls726")
+metadata/_custom_type_script = "uid://bogmwdj2dxgud"
+
+[node name="shop" type="AnimatedSprite2D" parent="shopkeeper" unique_id=832016164]
+position = Vector2(1065, 184)
+scale = Vector2(0.1322021, 0.1322021)
+sprite_frames = SubResource("SpriteFrames_dwvh3")
+animation = &"idle"
+frame = 1
+frame_progress = 0.44271883
+script = ExtResource("4_jyd35")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="shopkeeper" unique_id=1731207578]
+position = Vector2(1060, 249)
+shape = SubResource("CapsuleShape2D_msryb")
+
+[node name="shopkeep1" type="Label" parent="shopkeeper" unique_id=1931723461]
+visible = false
+z_index = 1
+offset_left = 935.0
+offset_top = 302.0
+offset_right = 1191.0
+offset_bottom = 367.0
+theme_override_font_sizes/font_size = 13
+text = "Hello there! I have something you might
+need. For a price. I need five whole coins
+for my troubles."
+script = ExtResource("5_jphpi")
+
+[node name="Sprite2D" type="Sprite2D" parent="shopkeeper/shopkeep1" unique_id=1147903785]
+z_index = -1
+position = Vector2(128, 36.00003)
+scale = Vector2(0.1450195, 0.1450195)
+texture = ExtResource("6_8db4n")
+
+[node name="shopkeep2" type="Label" parent="shopkeeper" unique_id=78464236]
+offset_left = 946.0
+offset_top = 306.0
+offset_right = 1181.0
+offset_bottom = 371.0
+theme_override_font_sizes/font_size = 13
+text = "Ahhh thank you. Here you go. Pleasure
+doing buisness"
+script = ExtResource("7_8db4n")
+
+[node name="Sprite2D2" type="Sprite2D" parent="shopkeeper/shopkeep2" unique_id=630665597]
+z_index = -1
+position = Vector2(124, 33)
+scale = Vector2(0.1450195, 0.1450195)
+texture = ExtResource("6_8db4n")
+
+[node name="player character" parent="." unique_id=1184873923 instance=ExtResource("5_0uynx")]
+position = Vector2(-428, -112)
+
+[node name="Camera2D" type="Camera2D" parent="player character" unique_id=1579737834]
+position = Vector2(554, 438)
+limit_left = 0
+limit_top = 0
+limit_right = 1253
+limit_bottom = 650
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1579938177]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=241520810]
+position = Vector2(625, 21.5)
+shape = SubResource("RectangleShape2D_0uynx")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=814540750]
+position = Vector2(625, 635)
+shape = SubResource("RectangleShape2D_0uynx")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=2000687830]
+position = Vector2(1243.5, 319)
+shape = SubResource("RectangleShape2D_lsdlt")
+
+[node name="r3tomainroom" type="Area2D" parent="." unique_id=433745741]
+script = ExtResource("6_lsdlt")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="r3tomainroom" unique_id=172002457]
+position = Vector2(5, 326.5)
+shape = SubResource("RectangleShape2D_jyd35")
+debug_color = Color(0.5550553, 0.55912775, 0.16812766, 0.41960785)
+
+[node name="coin" parent="." unique_id=542931823 instance=ExtResource("7_jyd35")]
+position = Vector2(415, 126)
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1631863259]
+z_index = 1
+position = Vector2(429.00003, 191)
+scale = Vector2(0.2126465, 0.2126465)
+texture = ExtResource("8_dwvh3")
+
+[node name="coin2" parent="." unique_id=197682986 instance=ExtResource("7_jyd35")]
+position = Vector2(267, -44)
+
+[node name="key3" type="Node2D" parent="." unique_id=1285550746]
+script = ExtResource("12_bo31e")
+
+[node name="interactablev2" parent="key3" unique_id=1960603387 instance=ExtResource("13_g1auq")]
+position = Vector2(254, -135)
+
+[connection signal="body_entered" from="r3tomainroom" to="r3tomainroom" method="_on_body_entered"]

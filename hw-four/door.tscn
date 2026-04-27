@@ -1,0 +1,39 @@
+[gd_scene format=3 uid="uid://lg38mipro7r4"]
+
+[ext_resource type="Script" uid="uid://nf5rrjch7uev" path="res://door.gd" id="1_ba8gm"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_v6xrn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0phs7"]
+size = Vector2(244, 308)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ba8gm"]
+size = Vector2(569, 44)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v6xrn"]
+size = Vector2(242, 152)
+
+[node name="door" type="Area2D" unique_id=273619539]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource("1_ba8gm")
+metadata/_custom_type_script = "uid://bogmwdj2dxgud"
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=787884664]
+position = Vector2(545.00006, 305)
+scale = Vector2(175.24998, 253.5)
+mesh = SubResource("BoxMesh_v6xrn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=964044615]
+position = Vector2(551, 427)
+shape = SubResource("RectangleShape2D_0phs7")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=211718180]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1952302791]
+position = Vector2(557.5, 264)
+shape = SubResource("RectangleShape2D_ba8gm")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=518310393]
+position = Vector2(550, 354)
+shape = SubResource("RectangleShape2D_v6xrn")

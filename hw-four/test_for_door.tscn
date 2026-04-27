@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://d3pags0s6dtuu"]
+
+[ext_resource type="PackedScene" uid="uid://dgo0jo5ktx6rf" path="res://player_character.tscn" id="1_iblgp"]
+[ext_resource type="PackedScene" uid="uid://lg38mipro7r4" path="res://door.tscn" id="2_dapm7"]
+[ext_resource type="PackedScene" uid="uid://ds5aqbnbdjw26" path="res://key.tscn" id="3_gyh0u"]
+
+[node name="test for door" type="Node2D" unique_id=2108548640]
+
+[node name="player character" parent="." unique_id=1515688360 instance=ExtResource("1_iblgp")]
+position = Vector2(21, -19)
+
+[node name="door" parent="." unique_id=273619539 instance=ExtResource("2_dapm7")]
+position = Vector2(15, -177)
+
+[node name="interactablev2" parent="." unique_id=1960603387 instance=ExtResource("3_gyh0u")]
+position = Vector2(694, -12)
+
+[node name="interactablev3" parent="." unique_id=727385973 instance=ExtResource("3_gyh0u")]
+position = Vector2(-510, -8)

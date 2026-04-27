@@ -1,18 +1,78 @@
 [gd_scene format=3 uid="uid://ds5aqbnbdjw26"]
 
 [ext_resource type="Script" uid="uid://b34hlsy07b658" path="res://key.gd" id="1_up4cr"]
+[ext_resource type="Texture2D" uid="uid://bhde34v1l2i1o" path="res://all of the assets bc theres gonna be a lot/IMG_0395.png" id="2_alhm2"]
+[ext_resource type="Texture2D" uid="uid://c46qqey640kl0" path="res://all of the assets bc theres gonna be a lot/IMG_0394.png" id="3_thsxu"]
+[ext_resource type="Texture2D" uid="uid://cuus4wlvaf57y" path="res://all of the assets bc theres gonna be a lot/IMG_0393.png" id="4_h2804"]
+[ext_resource type="Texture2D" uid="uid://bfaovwehlrq27" path="res://all of the assets bc theres gonna be a lot/IMG_0396.png" id="5_rxcsg"]
+[ext_resource type="Texture2D" uid="uid://b4674mv8k2a15" path="res://all of the assets bc theres gonna be a lot/IMG_0397.png" id="6_p66kx"]
+[ext_resource type="Texture2D" uid="uid://bfxoi1odx7h1x" path="res://all of the assets bc theres gonna be a lot/IMG_0400.png" id="7_4hxpy"]
+[ext_resource type="Texture2D" uid="uid://dc83wrdg4a8k1" path="res://all of the assets bc theres gonna be a lot/IMG_0399.png" id="8_kdlab"]
+[ext_resource type="Texture2D" uid="uid://bwwcqmiqr83qk" path="res://all of the assets bc theres gonna be a lot/IMG_0398.png" id="9_lrotk"]
+[ext_resource type="Texture2D" uid="uid://dr5v4pqvu71n8" path="res://all of the assets bc theres gonna be a lot/IMG_0401.png" id="10_6y7fx"]
+[ext_resource type="Script" uid="uid://mxd7ynu0lalp" path="res://keyanimation.gd" id="11_thsxu"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_krfvd"]
-radius = 86.0
-height = 638.0
+radius = 42.0
+height = 256.0
 
 [sub_resource type="SphereMesh" id="SphereMesh_d8y70"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_k4l57"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p0yg6"]
-radius = 73.0
+radius = 40.0
 height = 196.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_htl1e"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_alhm2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_thsxu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_thsxu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_h2804")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_alhm2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_rxcsg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_p66kx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_p66kx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_4hxpy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_kdlab")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_lrotk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_kdlab")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_4hxpy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_6y7fx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [node name="interactablev2" type="Area2D" unique_id=1960603387]
 collision_layer = 2
@@ -29,16 +89,19 @@ shape = SubResource("CapsuleShape2D_krfvd")
 [node name="theactual key" type="Area2D" parent="." unique_id=577197133]
 
 [node name="placeholder" type="MeshInstance2D" parent="theactual key" unique_id=1594467271]
+visible = false
 position = Vector2(482.99997, 301)
 scale = Vector2(57.564636, 56.50001)
 mesh = SubResource("SphereMesh_d8y70")
 
 [node name="placeholderr" type="MeshInstance2D" parent="theactual key" unique_id=2100797787]
+visible = false
 position = Vector2(539, 295)
 scale = Vector2(74.24997, 24.75002)
 mesh = SubResource("BoxMesh_k4l57")
 
 [node name="placeholderr2" type="MeshInstance2D" parent="theactual key" unique_id=1309275288]
+visible = false
 position = Vector2(564.5625, 303.3125)
 scale = Vector2(23.124977, 41.37502)
 mesh = SubResource("BoxMesh_k4l57")
@@ -47,3 +110,9 @@ mesh = SubResource("BoxMesh_k4l57")
 position = Vector2(522, 301)
 rotation = 1.5707964
 shape = SubResource("CapsuleShape2D_p0yg6")
+
+[node name="keyanimation" type="AnimatedSprite2D" parent="theactual key" unique_id=289992763]
+position = Vector2(527, 304)
+scale = Vector2(0.083007805, 0.083007805)
+sprite_frames = SubResource("SpriteFrames_htl1e")
+script = ExtResource("11_thsxu")

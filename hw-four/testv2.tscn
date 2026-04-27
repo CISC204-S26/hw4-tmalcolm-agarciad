@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://b5ae05tcpjwka"]
+
+[ext_resource type="PackedScene" uid="uid://dgo0jo5ktx6rf" path="res://player_character.tscn" id="1_nao7x"]
+[ext_resource type="PackedScene" uid="uid://0aht5psfyc33" path="res://coin.tscn" id="2_udoah"]
+
+[node name="test" type="Node2D" unique_id=1741978593]
+
+[node name="player character" parent="." unique_id=1515688360 instance=ExtResource("1_nao7x")]
+
+[node name="coin" parent="." unique_id=542931823 instance=ExtResource("2_udoah")]
+position = Vector2(90, -76)

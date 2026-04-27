@@ -5,6 +5,7 @@ script/source = "extends interactablev2
 
 
 func interact():
+	GlobalVariables.bone_just_collected = true
 	GlobalVariables.bones_collected = GlobalVariables.bones_collected+1
 	queue_free()
 	print(GlobalVariables.bones_collected)

@@ -2,13 +2,17 @@
 
 [ext_resource type="Texture2D" uid="uid://cwl1cu43wfv5" path="res://all of the assets bc theres gonna be a lot/WhatsApp_Image_2026-04-24_at_4.31.36_PM-removebg-preview.png" id="1_42abx"]
 [ext_resource type="Script" uid="uid://b3hr1ln5m5gbl" path="res://luna.gd" id="1_f67eo"]
+[ext_resource type="PackedScene" uid="uid://bsa6yrnfig5dr" path="res://cc.tscn" id="2_0ddim"]
 [ext_resource type="Texture2D" uid="uid://7orf6afkwh1i" path="res://all of the assets bc theres gonna be a lot/WhatsApp_Image_2026-04-24_at_4.36.21_PM-removebg-preview.png" id="2_2mi8r"]
 [ext_resource type="Script" uid="uid://bon06f332q4kl" path="res://testing.gd" id="3_4ex1j"]
+[ext_resource type="PackedScene" uid="uid://d3x2vhdlbqo7u" path="res://bc.tscn" id="3_p0gtk"]
 [ext_resource type="Texture2D" uid="uid://cp3u2ld0xpe7m" path="res://all of the assets bc theres gonna be a lot/image-removebg-preview.png" id="3_pkuhy"]
+[ext_resource type="PackedScene" uid="uid://ddhrgbjrxbiwq" path="res://kc.tscn" id="4_47bgj"]
 [ext_resource type="Texture2D" uid="uid://c74pw58213htd" path="res://all of the assets bc theres gonna be a lot/textbox.png" id="5_fypyr"]
 [ext_resource type="Script" uid="uid://b774fke5k6usa" path="res://pj_2.gd" id="5_j53t1"]
 [ext_resource type="PackedScene" uid="uid://ds5aqbnbdjw26" path="res://key.tscn" id="5_pkuhy"]
 [ext_resource type="PackedScene" uid="uid://b0jr0gh2i2s7p" path="res://bone.tscn" id="6_8mw5g"]
+[ext_resource type="Script" uid="uid://dytmdy2kkwt06" path="res://rooomtwoooo.gd" id="6_47bgj"]
 [ext_resource type="Script" uid="uid://cj0twtj2rsaa" path="res://luna_dialogue_two.gd" id="6_vc2au"]
 [ext_resource type="PackedScene" uid="uid://dgo0jo5ktx6rf" path="res://player_character.tscn" id="8_q86po"]
 [ext_resource type="Texture2D" uid="uid://dobnhlmnqenco" path="res://all of the assets bc theres gonna be a lot/bone3.png" id="8_r65xk"]
@@ -27,6 +31,7 @@
 [ext_resource type="Texture2D" uid="uid://5urgqv8f6mar" path="res://all of the assets bc theres gonna be a lot/sign.png" id="25_m2040"]
 [ext_resource type="Script" uid="uid://b545wx70a7anu" path="res://sign_1.gd" id="26_qnxmj"]
 [ext_resource type="PackedScene" uid="uid://0aht5psfyc33" path="res://coin.tscn" id="27_5aj27"]
+[ext_resource type="AudioStream" uid="uid://bk1xegldb6mx1" path="res://audio/Snowdin Town.mp3" id="31_47bgj"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_wtip8"]
 
@@ -43,7 +48,7 @@ size = Vector2(220.5, 366)
 size = Vector2(114, 477)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6g342"]
-size = Vector2(3027, 89)
+size = Vector2(3024, 80)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2oys6"]
 size = Vector2(59, 635)
@@ -54,7 +59,7 @@ size = Vector2(136, 147.5)
 [node name="room two (on left)" type="Node2D" unique_id=1556146920]
 
 [node name="player character" parent="." unique_id=1515688360 instance=ExtResource("8_q86po")]
-position = Vector2(2263, -108)
+position = Vector2(2231, -108)
 
 [node name="Camera2D" type="Camera2D" parent="player character" unique_id=1375268948]
 position = Vector2(570, 458)
@@ -62,6 +67,33 @@ limit_left = 0
 limit_top = 0
 limit_right = 2960
 limit_bottom = 650
+
+[node name="CC" parent="player character" unique_id=2058143255 instance=ExtResource("2_0ddim")]
+z_index = 3
+offset_left = 567.0
+offset_top = 292.0
+offset_right = 567.0
+offset_bottom = 292.0
+
+[node name="bc" parent="player character" unique_id=597204684 instance=ExtResource("3_p0gtk")]
+z_index = 3
+offset_left = 568.0
+offset_top = 426.0
+offset_right = 568.0
+offset_bottom = 426.0
+
+[node name="KC" parent="player character" unique_id=1469183497 instance=ExtResource("4_47bgj")]
+z_index = 3
+offset_left = 560.0
+offset_top = 330.0
+offset_right = 560.0
+offset_bottom = 330.0
+
+[node name="rooomtwoooo" type="AudioStreamPlayer2D" parent="player character" unique_id=1301297522]
+position = Vector2(550, 463)
+stream = ExtResource("31_47bgj")
+volume_db = -0.55
+script = ExtResource("6_47bgj")
 
 [node name="MeshInstance2D" type="MeshInstance2D" parent="." unique_id=1529846079]
 position = Vector2(1480.9999, 40.07584)
@@ -256,7 +288,7 @@ debug_color = Color(0.55838025, 0.55435246, 0.2481586, 0.41960785)
 [node name="room barriers" type="StaticBody2D" parent="." unique_id=240435064]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="room barriers" unique_id=556243631]
-position = Vector2(1503.5, 34.5)
+position = Vector2(1502, 39)
 shape = SubResource("RectangleShape2D_6g342")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="room barriers" unique_id=1706215807]

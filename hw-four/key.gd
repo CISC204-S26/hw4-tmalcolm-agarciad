@@ -1,6 +1,7 @@
 extends interactablev2
 
 func interact():
+	GlobalVariables.key_just_collected = true
 	GlobalVariables.keys_collected = GlobalVariables.keys_collected+1
 	print(GlobalVariables.keys_collected)
 	#will need to work on this to make it global but for now it works

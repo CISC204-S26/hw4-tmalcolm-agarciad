@@ -10,6 +10,7 @@
 script/source = "extends interactablev2
 
 func interact():
+	GlobalVariables.coin_just_collected = true
 	GlobalVariables.coins_collected = GlobalVariables.coins_collected+1
 	print(GlobalVariables.coins_collected)
 	#will need to work on this to make it global but for now it works

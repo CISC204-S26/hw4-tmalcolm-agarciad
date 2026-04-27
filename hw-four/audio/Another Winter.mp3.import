@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c7dya6fi81l1d"
+path="res://.godot/imported/Another Winter.mp3-a44cd95fcdc762ea8bf285ee8de9dcfa.mp3str"
+
+[deps]
+
+source_file="res://audio/Another Winter.mp3"
+dest_files=["res://.godot/imported/Another Winter.mp3-a44cd95fcdc762ea8bf285ee8de9dcfa.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

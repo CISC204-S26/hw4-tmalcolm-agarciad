@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://br6rr5h5wcj3q"]
+
+[ext_resource type="Texture2D" uid="uid://dobnhlmnqenco" path="res://all of the assets bc theres gonna be a lot/bone3.png" id="1_nltto"]
+[ext_resource type="Script" uid="uid://cled87i4qkq8i" path="res://bonecounter_.gd" id="2_ibotj"]
+[ext_resource type="Texture2D" uid="uid://c5qhxvpj6rvqf" path="res://all of the assets bc theres gonna be a lot/Coin 1.png" id="3_n5ude"]
+[ext_resource type="Script" uid="uid://cgnjwbiemrtv3" path="res://coincounter_2.gd" id="4_ibotj"]
+[ext_resource type="Texture2D" uid="uid://bwwcqmiqr83qk" path="res://all of the assets bc theres gonna be a lot/IMG_0398.png" id="4_y4yjw"]
+[ext_resource type="Script" uid="uid://b6dy7s5u81wlj" path="res://keycounter_3.gd" id="6_n5ude"]
+
+[node name="Control" type="Control" unique_id=1469989428]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="bonecounter" type="Sprite2D" parent="." unique_id=1799641361]
+position = Vector2(54, 46)
+scale = Vector2(0.03881839, 0.03881839)
+texture = ExtResource("1_nltto")
+
+[node name="bonecounter_" type="RichTextLabel" parent="bonecounter" unique_id=322207513]
+offset_left = 747.0686
+offset_top = -566.7417
+offset_right = 3451.9722
+offset_bottom = 566.7417
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 1000
+bbcode_enabled = true
+script = ExtResource("2_ibotj")
+
+[node name="coincounter" type="Sprite2D" parent="." unique_id=1873549597]
+position = Vector2(45.25, 123.25)
+scale = Vector2(0.031982422, 0.031982422)
+texture = ExtResource("3_n5ude")
+
+[node name="coincounter_2" type="RichTextLabel" parent="coincounter" unique_id=1060448285]
+offset_left = 1180.3358
+offset_top = -820.7634
+offset_right = 4400.855
+offset_bottom = 711.32837
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 1000
+bbcode_enabled = true
+script = ExtResource("4_ibotj")
+
+[node name="keycounter" type="Sprite2D" parent="." unique_id=8241310]
+position = Vector2(56.000004, 196)
+scale = Vector2(0.06066895, 0.06066895)
+texture = ExtResource("4_y4yjw")
+
+[node name="keycounter_3" type="RichTextLabel" parent="keycounter" unique_id=1637435607]
+offset_left = 906.55927
+offset_top = -412.0725
+offset_right = 2357.0542
+offset_bottom = 379.1067
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 700
+bbcode_enabled = true
+script = ExtResource("6_n5ude")

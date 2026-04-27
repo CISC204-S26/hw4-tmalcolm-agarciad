@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://bsa6yrnfig5dr"]
+
+[ext_resource type="Texture2D" uid="uid://c5qhxvpj6rvqf" path="res://all of the assets bc theres gonna be a lot/Coin 1.png" id="1_nct0t"]
+[ext_resource type="Script" uid="uid://j5wr633ak7t" path="res://cc.gd" id="1_rbmax"]
+[ext_resource type="Script" uid="uid://cgnjwbiemrtv3" path="res://coincounter_2.gd" id="2_rbmax"]
+[ext_resource type="AudioStream" uid="uid://f0yt355iv658" path="res://audio/8-bit-coin-sound-effect-copyright-free_a0DDlhO5.mp3" id="4_4aj2v"]
+
+[node name="CC" type="Control" unique_id=2058143255]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rbmax")
+
+[node name="coincounter" type="Sprite2D" parent="." unique_id=1294408187]
+position = Vector2(45.25, 123.25)
+scale = Vector2(0.031982422, 0.031982422)
+texture = ExtResource("1_nct0t")
+
+[node name="coincounter_2" type="RichTextLabel" parent="coincounter" unique_id=670891435]
+offset_left = 1180.3358
+offset_top = -820.7634
+offset_right = 4400.855
+offset_bottom = 711.32837
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 1000
+bbcode_enabled = true
+script = ExtResource("2_rbmax")
+metadata/_edit_use_anchors_ = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=73910233]
+stream = ExtResource("4_4aj2v")

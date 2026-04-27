@@ -4,7 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://b6c6tqslnokq3" path="res://all of the assets bc theres gonna be a lot/gemstone.png" id="2_e3dau"]
 [ext_resource type="PackedScene" uid="uid://dgo0jo5ktx6rf" path="res://player_character.tscn" id="3_e3dau"]
 [ext_resource type="Script" uid="uid://bbmtksgumt88g" path="res://sign_2.gd" id="4_7dsrc"]
+[ext_resource type="AudioStream" uid="uid://c7dya6fi81l1d" path="res://audio/Another Winter.mp3" id="4_yofy1"]
 [ext_resource type="Texture2D" uid="uid://wbgw4dc48rc" path="res://all of the assets bc theres gonna be a lot/IMG_0407.png" id="5_b3215"]
+[ext_resource type="Script" uid="uid://dgar0xh02yusi" path="res://lastroom.gd" id="5_gtlgj"]
 [ext_resource type="Script" uid="uid://sguw4743owdk" path="res://sign_2r_4.gd" id="6_b3215"]
 [ext_resource type="Texture2D" uid="uid://c74pw58213htd" path="res://all of the assets bc theres gonna be a lot/textbox.png" id="6_itxc0"]
 
@@ -72,6 +74,10 @@ shape = SubResource("CircleShape2D_wixkd")
 
 [node name="player character" parent="." unique_id=1184873923 instance=ExtResource("3_e3dau")]
 position = Vector2(8, 92)
+
+[node name="LASTROOM" type="AudioStreamPlayer2D" parent="player character" unique_id=293434611]
+stream = ExtResource("4_yofy1")
+script = ExtResource("5_gtlgj")
 
 [node name="SIGN2" type="Area2D" parent="." unique_id=1882593237]
 collision_layer = 2

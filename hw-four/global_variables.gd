@@ -5,6 +5,10 @@ var coins_collected = 0
 var bones_collected = 0
 var gem_collected = false
 
+var coin_just_collected = false
+var bone_just_collected = false
+var key_just_collected = false
+
 
 #ui variables good lord
 var luna_dialoge_1 = false

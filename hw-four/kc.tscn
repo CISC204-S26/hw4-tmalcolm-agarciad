@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://ddhrgbjrxbiwq"]
+
+[ext_resource type="Texture2D" uid="uid://bwwcqmiqr83qk" path="res://all of the assets bc theres gonna be a lot/IMG_0398.png" id="1_81156"]
+[ext_resource type="Script" uid="uid://djqbe15gm0lrs" path="res://kc.gd" id="1_elk7q"]
+[ext_resource type="Script" uid="uid://b6dy7s5u81wlj" path="res://keycounter_3.gd" id="2_elk7q"]
+[ext_resource type="AudioStream" uid="uid://c30jf6hnfqba3" path="res://audio/jingling-keys-natural-reverb-sound-effect_84T7cJvz.mp3" id="4_oyw2f"]
+
+[node name="KC" type="Control" unique_id=1469183497]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_elk7q")
+
+[node name="keycounter" type="Sprite2D" parent="." unique_id=948623471]
+position = Vector2(56.000004, 196)
+scale = Vector2(0.06066895, 0.06066895)
+texture = ExtResource("1_81156")
+
+[node name="keycounter_3" type="RichTextLabel" parent="keycounter" unique_id=1283497039]
+offset_left = 906.55927
+offset_top = -412.0725
+offset_right = 2357.0542
+offset_bottom = 379.1067
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/normal_font_size = 700
+bbcode_enabled = true
+script = ExtResource("2_elk7q")
+metadata/_edit_use_anchors_ = true
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=1668985098]
+stream = ExtResource("4_oyw2f")

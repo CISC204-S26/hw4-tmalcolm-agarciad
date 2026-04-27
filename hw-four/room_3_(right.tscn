@@ -11,7 +11,11 @@
 [ext_resource type="Script" uid="uid://dk8gfrwbcru07" path="res://shopkeep_2.gd" id="7_8db4n"]
 [ext_resource type="PackedScene" uid="uid://0aht5psfyc33" path="res://coin.tscn" id="7_jyd35"]
 [ext_resource type="Texture2D" uid="uid://c0v2w5jy2i1c0" path="res://all of the assets bc theres gonna be a lot/treeone.png" id="8_dwvh3"]
+[ext_resource type="PackedScene" uid="uid://ddhrgbjrxbiwq" path="res://kc.tscn" id="9_iqxxi"]
+[ext_resource type="PackedScene" uid="uid://bsa6yrnfig5dr" path="res://cc.tscn" id="10_eek6u"]
+[ext_resource type="AudioStream" uid="uid://e4jha2v8mx6q" path="res://audio/Dead Cells - The Merchant (Official Soundtrack).mp3" id="11_yendn"]
 [ext_resource type="Script" uid="uid://d0mnygjy5ed7q" path="res://key_3.gd" id="12_bo31e"]
+[ext_resource type="Script" uid="uid://bnjnbl0k2lnxf" path="res://rooomthreeee.gd" id="12_fk13b"]
 [ext_resource type="PackedScene" uid="uid://ds5aqbnbdjw26" path="res://key.tscn" id="13_g1auq"]
 
 [sub_resource type="BoxMesh" id="BoxMesh_ls726"]
@@ -118,7 +122,7 @@ scale = Vector2(0.1450195, 0.1450195)
 texture = ExtResource("6_8db4n")
 
 [node name="player character" parent="." unique_id=1184873923 instance=ExtResource("5_0uynx")]
-position = Vector2(-428, -112)
+position = Vector2(-431, -85)
 
 [node name="Camera2D" type="Camera2D" parent="player character" unique_id=1579737834]
 position = Vector2(554, 438)
@@ -126,6 +130,23 @@ limit_left = 0
 limit_top = 0
 limit_right = 1253
 limit_bottom = 650
+
+[node name="KC" parent="player character" unique_id=1469183497 instance=ExtResource("9_iqxxi")]
+offset_left = 571.0
+offset_top = 215.0
+offset_right = 571.0
+offset_bottom = 215.0
+
+[node name="CC" parent="player character" unique_id=2058143255 instance=ExtResource("10_eek6u")]
+offset_left = 572.0
+offset_top = 336.0
+offset_right = 572.0
+offset_bottom = 336.0
+
+[node name="rooomthreeee" type="AudioStreamPlayer2D" parent="player character" unique_id=730262462]
+position = Vector2(556, 448)
+stream = ExtResource("11_yendn")
+script = ExtResource("12_fk13b")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1579938177]
 
